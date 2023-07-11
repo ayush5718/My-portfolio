@@ -6,14 +6,17 @@
     scroll-behavior: smooth;
     font-family: 'Be vietnam pro', 'sans-serif';
 }
+body{
+    overflow-x: hidden;
+}
 :root{
     --bgOrange:#e84949;
 }
-#wrapper{
+/* #wrapper{
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-}
+} */
 .container{
     width:1200px;
     margin:0 auto;
@@ -23,7 +26,7 @@
     justify-content: space-between;
     align-items: center;
     padding-top:1rem;
-   margin-left:5rem;
+   
 }
 .nav-left{
     display: flex;
@@ -65,7 +68,6 @@
 }
 .hero-section{
     display: flex;
-    justify-content: space-evenly;
     position:relative;
     align-items: center;
     justify-content: center ;
@@ -73,6 +75,7 @@
     margin:4rem auto;
     padding:0 1rem;
     padding-bottom:8rem;
+   
 }
 .faded-text{
     position:absolute;
@@ -83,11 +86,14 @@
     left:-5%;
     font-weight: bold;
     transition: all 3s;
+
 }
 .hero-section-left{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap:1.6rem;
+    justify-content: center;
+    gap:2rem;
 }
 .hero-section-heading{
     font-size:35px;
@@ -95,7 +101,7 @@
     font-weight: 500;
 }
 .role{
-    color:#4e45d5;
+    color:#ca1515;
     font-weight:800;
 }
 .hero-section-sub-heading{
@@ -148,13 +154,16 @@
 } 
 
 .my-pic img{
-    padding:2rem;
+    padding:2.5rem;
     filter:grayscale(1);
     transition: all 1s;
     animation:scaleImage 5s linear infinite;
-    width:400px;
-    height:410px;
+   
     border-radius: 5px;
+}
+.my-pic img{
+    object-fit: cover;
+    z-index:-9;
 }
 @keyframes scaleImage{
     0%{
@@ -567,6 +576,7 @@ textarea{
     border-radius: 10px;
     padding:0.8rem;
     font-size: 16px;
+    border:none;
 }
 .btn-form{
     text-align: left;
@@ -584,4 +594,46 @@ textarea{
     box-shadow: 5px 5px 20px black;
     padding:1.2rem;
     font-size: 16px;
+    border:none;
+}
+
+/* footer section css  */
+.footer-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:300px;
+    flex-wrap: wrap;
+    background-color: #343d68;
+    position: relative;
+}
+
+.footer-left ul a{
+    margin-left:1rem;
+    font-size: 1.3rem;
+}
+.footer-left ul a:hover{
+    font-weight: bold;
+}
+.footer-right a{
+    margin-left:1rem;
+    font-size: 2rem;
+    transform: scale(0);
+    transition:0.4s ;
+}
+.footer-icon:hover{
+    font-size:40px;
+    color:var(--bgOrange)
+}
+.footer-section a{
+    color:#fff;
+    text-decoration: none;
+}
+.footer-faded-text{
+    bottom: 0px;
+    left: 0px;
+    position: relative;
+    font-size: 4rem;
+    position: absolute;
+    opacity: 0.4;
 }

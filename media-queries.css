@@ -1,4 +1,43 @@
-@media  screen and (width<=1300px) {
+/*hero-section-media-queries*/
+@media (max-width:1300px) {
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: -1rem;
+    padding-bottom: 3rem;
+  }
+  .hero-section-description {
+    text-align: center;
+    margin: auto;
+  }
+  .faded-text {
+    display: none;
+  }
+  #btn-top {
+    display: none;
+  }
+  #btn-bottom {
+    margin-top: -7rem;
+    display: block;
+  }
+  .hero-section-right {
+    margin-top: -6em;
+    scale: 0.7;
+  }
+}
+@media  (max-width:1300px) {
+    @media (max-width:1500px) {
+        .nav-items {
+          padding: 0 8em;
+        }
+      }
+      @media (max-width:1000px) {
+        .nav-items {
+          display: none;
+        }
+      }
     .project-header{
         padding-top: 30px;
         color: var(--bgOrange);
@@ -57,4 +96,9 @@
     .project-card:hover .project-content{
         scale:0.55;
     }
-}
+
+   
+     
+      
+    }
+
